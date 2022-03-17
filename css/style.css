@@ -22,10 +22,14 @@
   line-height: 1.7;
 }
 
-body {
-  min-width: 768px;
+/*body {
+  width: 1200px;
   margin-left: 20px;
   margin-right: 20px;
+}*/
+
+body {
+  overflow-x: hidden;
 }
 
 a {
@@ -37,20 +41,27 @@ a:hover {
   color: white;
 }
 
+.content {
+  width: 1200px;
+  min-width: 768px;
+  margin: auto;
+}
+
+/* Header */
 #header {
-  background: url("../img/header.jpg") no-repeat center;
+  background-image: url("../img/header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  margin-left: -20px;
-  margin-right: -20px;
   min-height: 400px;
+  margin: auto;
+  width: 100vw;
   height: 100vh;
 }
 
-.content {
-  margin-left: 20px;
-  margin-right: 20px;
-  height: 100vh;
-}
+/*  margin-left: 20px;
+  margin-right: 20px;*/
+
 #header-menu {
   height: 10vh;
   padding-top: 5px;
@@ -187,4 +198,204 @@ a:hover {
 }
 #header-title {
   padding-top: 56vh;
+}
+
+/* Section services */
+#services {
+  margin-top: 60px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+#services h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+}
+/* Services paragraph*/
+#services > div:nth-child(1) > p:nth-child(2) {
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-top: 10px;
+  color: var(--grey);
+  min-width: 300px;
+}
+
+.services-column .services-card {
+  width: 300px;
+  padding: 15px;
+  box-shadow: 0 0 10px 0 var(--liggrey);
+}
+
+.services-column .services-card:hover {
+  width: 300px;
+  padding: 15px;
+  box-shadow: 0 0 10px 0 steelblue;
+}
+
+.services-column .services-card p {
+  text-align: center;
+  font-size: 14px;
+  color: var(--liggrey);
+}
+/* Services card grip */
+#services > div:nth-child(1) > div:nth-child(3) {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-gap: 40px;
+  margin-top: 50px;
+  margin-left: 280px;
+  margin-right: 280px;
+}
+
+.services-column .services-card img:last-child {
+  display: none;
+}
+
+.services-column .services-card img:first-child {
+  border: 1px solid steelblue;
+  display: block;
+  padding: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.services-column .services-card:hover img:first-child {
+  display: none;
+}
+
+.services-column .services-card:hover img:last-child {
+  border: 1px solid steelblue;
+  background-color: steelblue;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.services-column .services-card h3 {
+  font-size: 24px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.services-column .services-card:hover h3 {
+  padding-top: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: steelblue;
+}
+
+/* Section about*/
+#about {
+  background-color: var(--mevyr);
+  background-size: cover;
+  background-clip: padding-box;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+#about div:nth-child(odd) {
+  margin-top: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#about div:nth-child(even) {
+  padding-top: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#about div:nth-child(odd) img {
+  max-width: 40%;
+  max-height: 40%;
+  border-radius: 5px;
+  float: left;
+  clear: right;
+  margin-right: 80px;
+  margin-bottom: 40px;
+}
+
+#about div:nth-child(odd) h2 {
+  font-size: 32px;
+  padding-bottom: 20px;
+}
+
+#about div:nth-child(odd) p {
+  color: var(--grey);
+  font-size: 18px;
+  text-align: justify;
+}
+
+#about div:nth-child(odd) img:hover {
+  max-width: 50%;
+  max-height: 50%;
+  transition: 0.5s;
+}
+
+#about div:nth-child(even) img {
+  border-radius: 5px;
+  max-width: 40%;
+  max-height: 40%;
+  margin-left: 80px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  float: right;
+  clear: left;
+}
+
+#about div:nth-child(even) p {
+  padding-right: 0px;
+  color: var(--grey);
+  font-size: 18px;
+  text-align: justify;
+}
+
+#about div:nth-child(even) h2 {
+  clear: left;
+}
+
+/* Section team */
+#team {
+  margin-top: 60px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+#team h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+#team .team-card {
+  box-shadow: 0 0 10px 0 var(--liggrey);
+  display: inline-block;
+  width: 250px;
+}
+
+#team .team-card:hover {
+  box-shadow: 0 0 10px 0 steelblue;
+}
+
+#team .team-card:hover h3 ~ h4 {
+  color: steelblue;
+}
+
+
+#team .team-card img {
+  width: 250px;
+}
+
+/*TODO background image nesedi pri overflowe*/
+@media only screen and (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
 }
