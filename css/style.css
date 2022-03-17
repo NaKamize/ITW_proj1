@@ -1,8 +1,190 @@
 /*
- * Login:
+ * Login: xmakis00
  *
  * Doplnte sve reseni.
  *
  * Nezapomente pridat strucne hromadne komentare pro pravidla jednotlivych sekci
  * a pro netrivialni useky kodu (napr. bubliny v sekci #refs)
  */
+
+:root {
+  --grey: #898989;
+  --liggrey: #bfbfbf;
+  --darkgrey: #4d4d4d;
+  --mevyr: #f7f7f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans";
+  line-height: 1.7;
+}
+
+body {
+  min-width: 768px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: steelblue;
+}
+
+a:hover {
+  color: white;
+}
+
+#header {
+  background: url("../img/header.jpg") no-repeat center;
+  background-size: cover;
+  margin-left: -20px;
+  margin-right: -20px;
+  min-height: 400px;
+  height: 100vh;
+}
+
+.content {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 100vh;
+}
+#header-menu {
+  height: 10vh;
+  padding-top: 5px;
+  display: grid;
+}
+
+#header-menu #logo {
+  margin-right: auto;
+  margin-top: auto;
+  margin-left: 0;
+  margin-bottom: auto;
+  grid-row: 1;
+  font-family: "Special Elite";
+  font-size: 25px;
+  text-decoration: none;
+  justify-content: left;
+  color: steelblue;
+}
+
+#header-menu #logo a {
+  font-family: "Special Elite";
+  font-size: 25px;
+}
+
+#contacts {
+  grid-row: 1;
+  display: flex;
+  color: var(--grey);
+  justify-content: right;
+  margin-right: 0;
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+  font-size: 18px;
+}
+
+#contacts span {
+  margin-left: 10px;
+}
+
+#contacts span i {
+  margin-right: 5px;
+}
+
+#contacts a {
+  color: var(--grey);
+}
+
+#contacts a:hover {
+  color: white;
+}
+
+#phone i,
+#mail i {
+  color: steelblue;
+}
+
+#networks {
+  grid-row: 2;
+  grid-column: 2;
+  display: flex;
+  justify-content: right;
+  color: steelblue;
+  font-size: 24px;
+}
+
+#networks span {
+  margin-left: 10px;
+}
+
+#navigation {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+#navigation ul {
+  display: flex;
+  flex-direction: row;
+}
+
+#navigation ul li {
+  font-size: 15px;
+  list-style-type: none;
+  word-spacing: 0.05em;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#navigation ul li a {
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+#navigation ul li:hover {
+  border: 1px solid var(--liggrey);
+  transition: 0.5s;
+}
+
+#header .content #header-title h1 {
+  font-size: 64px;
+  color: white;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#get-started {
+  font-size: 18px;
+  color: var(--liggrey);
+  padding: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  display: inline-block;
+  width: auto;
+  border: 2px solid var(--liggrey);
+}
+
+#get-started a {
+  color: var(--liggrey);
+  display: inline-block;
+}
+
+#get-started:hover {
+  background-color: steelblue;
+  transition: 0.5s;
+}
+
+#get-started:hover a {
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+}
+#header-title {
+  padding-top: 56vh;
+}
