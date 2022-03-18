@@ -369,15 +369,45 @@ a:hover {
   text-align: center;
 }
 
+#team .content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+}
+
 #team h2 {
   text-transform: uppercase;
   font-size: 40px;
+  display: flex;
+  padding-bottom: 30px;
+  justify-content: center;
+  flex: 1 100%;
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 5;
 }
 
 #team .team-card {
+  grid-row: 2;
   box-shadow: 0 0 10px 0 var(--liggrey);
-  display: inline-block;
-  width: 250px;
+  width: 285px;
+}
+
+#team .team-card h3 {
+  padding-top: 20px;
+  font-size: 24px;
+}
+
+#team .team-card h4 {
+  color: var(--grey);
+}
+
+#team .team-card p {
+  color: var(--liggrey);
+  text-align: center;
+  font-size: 14px;
 }
 
 #team .team-card:hover {
@@ -388,9 +418,8 @@ a:hover {
   color: steelblue;
 }
 
-
 #team .team-card img {
-  width: 250px;
+  width: 285px;
 }
 
 /*TODO background image nesedi pri overflowe*/
