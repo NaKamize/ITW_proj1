@@ -22,12 +22,6 @@
   line-height: 1.7;
 }
 
-/*body {
-  width: 1200px;
-  margin-left: 20px;
-  margin-right: 20px;
-}*/
-
 body {
   overflow-x: hidden;
 }
@@ -58,9 +52,6 @@ a:hover {
   width: 100vw;
   height: 100vh;
 }
-
-/*  margin-left: 20px;
-  margin-right: 20px;*/
 
 #header-menu {
   height: 10vh;
@@ -150,6 +141,7 @@ a:hover {
   padding-right: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
+  border: 1px solid transparent;
 }
 
 #navigation ul li a {
@@ -211,6 +203,7 @@ a:hover {
   font-size: 48px;
   text-transform: uppercase;
 }
+
 /* Services paragraph*/
 #services > div:nth-child(1) > p:nth-child(2) {
   margin-left: 100px;
@@ -237,6 +230,7 @@ a:hover {
   font-size: 14px;
   color: var(--liggrey);
 }
+
 /* Services card grip */
 #services > div:nth-child(1) > div:nth-child(3) {
   display: grid;
@@ -414,12 +408,123 @@ a:hover {
   box-shadow: 0 0 10px 0 steelblue;
 }
 
-#team .team-card:hover h3 ~ h4 {
+#team .team-card:hover h3 {
   color: steelblue;
 }
 
 #team .team-card img {
   width: 285px;
+}
+
+/* Stats */
+#stats {
+  border-top: 2px dashed #4d4d4d;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+#stats .content {
+  padding-top: 60px;
+  flex: 1 0 20px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+#stats h3 {
+  color: white;
+  font-size: 24px;
+}
+
+#stats i {
+  position: absolute;
+  font-size: 32px;
+  padding: 10px;
+  top: -30px;
+  left: 125px;
+  color: steelblue;
+  border-radius: 30px;
+  background-color: white;
+}
+
+#stats p {
+  color: var(--liggrey);
+  padding-top: 5px;
+  font-size: 14px;
+}
+
+.stats-card {
+  position: relative;
+  background-color: #4d4d4d;
+  border-radius: 5px;
+  min-width: 300px;
+  padding: 30px;
+}
+
+.stats-card:hover {
+  background-color: steelblue;
+}
+
+/* Price */
+#price {
+  margin-top: 60px;
+  margin-bottom: 80px;
+  background-color: var(--mevyr);
+  background-size: cover;
+}
+
+#price .content{ 
+  margin-bottom: 80px;
+}
+
+#price h2 {
+  padding-top: 80px;
+  text-align: center;
+  font-size: 40px;
+}
+
+#price table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+}
+
+#price thead th {
+  text-align: left;
+  padding: 20px;
+}
+
+#price tbody {
+  color: var(--grey);
+}
+
+#price td {
+  border-top: 1px solid steelblue;
+  border-bottom: 1px solid steelblue;
+  padding: 20px;
+}
+
+#price button {
+  padding: 20px;
+  background-color: var(--mevyr);
+  border: 1px solid steelblue;
+  border-radius: 5px;
+}
+
+#price button:hover {
+  background-color: steelblue;
+  color: white;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+td > ul > li:nth-child(1) {
+  margin-left: -15px;
+  font-weight: bolder;
+  list-style-type: none;
 }
 
 /*TODO background image nesedi pri overflowe*/
