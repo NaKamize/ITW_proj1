@@ -471,18 +471,16 @@ main {
 
 /* Price */
 #price {
-  margin-top: 60px;
-  margin-bottom: 80px;
   background-color: var(--mevyr);
   background-size: cover;
 }
 
 #price .content {
+  margin-top: 60px;
   margin-bottom: 80px;
 }
 
 #price h2 {
-  padding-top: 80px;
   text-align: center;
   font-size: 40px;
 }
@@ -538,6 +536,7 @@ td > ul > li:nth-child(1) {
   list-style-type: none;
 }
 
+/* refs */
 #refs {
   margin-top: 60px;
   margin-bottom: 80px;
@@ -585,11 +584,13 @@ td > ul > li:nth-child(1) {
   font-size: 18px;
 }
 #refs .refs-card {
+  align-items: stretch;
   background-color: #4d4d4d;
   border-radius: 5px;
-  width: 300px;
+  flex: 1 1 0px;
   max-width: 400px;
   position: relative;
+  align-self: flex-start; 
 }
 
 #refs .refs-card:hover {
@@ -613,6 +614,7 @@ figure img {
   display: inline;
 }
 
+/* contact */
 #contact {
   border-top: 2px dashed #4d4d4d;
   margin-top: 60px;
@@ -710,6 +712,7 @@ textarea:valid {
   color: steelblue;
 }
 
+/* Footer */
 #footer {
   padding-top: 40px;
   padding-bottom: 40px;
