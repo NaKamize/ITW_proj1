@@ -552,19 +552,43 @@ td > ul > li:nth-child(1) {
   justify-content: center;
 }
 
+#refs .refs-card {
+  max-width: 400px;
+  flex: 1 1 0px;
+  height: 200px;
+}
+
+#refs .refs-card:hover blockquote {
+  background-color: steelblue;
+}
+
+#refs .refs-card:hover blockquote::after {
+  border-top-color: steelblue;
+}
+
+#refs .refs-card:hover blockquote::before {
+  color: white;
+}
+
+#refs .refs-card:hover figure h3 {
+  color: steelblue;
+}
+
+#refs blockquote {
+  position: relative;
+  color: steelblue;
+  border-radius: 5px;
+  background-color: #4d4d4d;
+  font-size: 18px;
+  height: 100px;
+}
+
 #refs blockquote::before {
   content: '"';
   font-style: italic;
-  display: flex;
-  padding-top: 40px;
-  align-items: center;
   font-size: 100px;
-}
-
-#refs blockquote:hover {
-  color: white;
-  background-color: steelblue;
-  border-radius: 5px;
+  position: relative;
+  top: -15px;
 }
 
 #refs blockquote::after {
@@ -585,23 +609,10 @@ td > ul > li:nth-child(1) {
 #refs blockquote span {
   color: white;
   font-size: 18px;
+  position: absolute;
+  padding-top: 30px;
   padding-left: 10px;
-}
-
-#refs blockquote {
-  color: steelblue;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  height: 100px;
-}
-
-#refs .refs-card {
-  background-color: #4d4d4d;
-  border-radius: 5px;
-  max-width: 400px;
-  flex: 1 1 0px;
-  position: relative;
+  padding-right: 20px;
 }
 
 figure img {
@@ -610,9 +621,10 @@ figure img {
 }
 
 #refs figure {
-  position: absolute;
   display: flex;
-  top: 120%;
+  width: 60px;
+  padding-top: 30px;
+  top: 140%;
 }
 
 #refs figure h3 {
