@@ -41,7 +41,7 @@ main {
 }
 
 .content {
-  width: 1200px;
+  max-width: 1200px;
   min-width: 768px;
   margin: auto;
 }
@@ -239,11 +239,11 @@ main {
 /* Services card grip */
 #services > div:nth-child(1) > div:nth-child(3) {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 40px;
+  justify-content: center;
   margin-top: 50px;
-  margin-left: 280px;
-  margin-right: 280px;
 }
 
 .services-column .services-card img:last-child {
@@ -254,7 +254,6 @@ main {
   border: 1px solid steelblue;
   display: block;
   padding: 5px;
-  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50px;
@@ -552,49 +551,53 @@ td > ul > li:nth-child(1) {
 #refs blockquote::before {
   content: '"';
   font-style: italic;
-  font-size: 80px;
   display: flex;
+  padding-top: 40px;
   align-items: center;
-  margin-top: 40px;
+  font-size: 100px;
 }
 
 #refs blockquote:hover {
   color: white;
+  background-color: steelblue;
+  border-radius: 5px;
 }
 
 #refs blockquote::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 10%;
-  border: 10px solid;
-  border-color: #4d4d4d white white #4d4d4d;
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 15%;
+	width: 0;
+	height: 0;
+	border: 22px solid transparent;
+	border-top-color: var(--darkgrey);
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -11px;
+	margin-bottom: -22px;
 }
 
 #refs blockquote span {
   color: white;
   font-size: 18px;
-  display: flex;
-  align-items: center;
-  margin: 10px 10px 10px 10px;
-}
-#refs blockquote {
-  color: steelblue;
-  display: flex;
-  font-size: 18px;
-}
-#refs .refs-card {
-  align-items: stretch;
-  background-color: #4d4d4d;
-  border-radius: 5px;
-  flex: 1 1 0px;
-  max-width: 400px;
-  position: relative;
-  align-self: flex-start; 
+  padding-left: 10px;
+
 }
 
-#refs .refs-card:hover {
-  background-color: steelblue;
+#refs blockquote {
+  color: steelblue;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+#refs .refs-card {
+  background-color: #4d4d4d;
+  border-radius: 5px;
+  max-width: 400px;
+  flex: 1 1 0px;
+  position: relative;
 }
 
 figure img {
@@ -610,7 +613,9 @@ figure img {
 
 #refs figure h3 {
   margin: auto;
-  padding-left: 10px;
+  padding-left: 20px;
+  color: var(--liggrey);
+  font-size: 18px;
   display: inline;
 }
 
