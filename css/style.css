@@ -43,6 +43,8 @@ main {
 .content {
   max-width: 1200px;
   min-width: 768px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: auto;
 }
 
@@ -53,7 +55,6 @@ main {
   background-position: center;
   background-size: cover;
   min-height: 400px;
-  margin: auto;
   width: 100vw;
   height: 100vh;
 }
@@ -372,7 +373,6 @@ main {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   grid-column-gap: 20px;
-  grid-row-gap: 0px;
 }
 
 #team h2 {
@@ -390,7 +390,9 @@ main {
 #team .team-card {
   grid-row: 2;
   box-shadow: 0 0 10px 0 var(--liggrey);
-  width: 285px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0px;
 }
 
 #team .team-card h3 {
@@ -417,7 +419,8 @@ main {
 }
 
 #team .team-card img {
-  width: 285px;
+  width: 100%;
+  height: auto;
 }
 
 /* Stats */
@@ -429,7 +432,6 @@ main {
 
 #stats .content {
   padding-top: 60px;
-  flex: 1 0 20px;
   display: flex;
   justify-content: space-evenly;
   text-align: center;
@@ -459,8 +461,10 @@ main {
 .stats-card {
   position: relative;
   background-color: #4d4d4d;
+  margin-left: 20px;
+  flex: 1 1 0px;
   border-radius: 5px;
-  min-width: 300px;
+  max-width: 300px;
   padding: 30px;
 }
 
@@ -564,25 +568,24 @@ td > ul > li:nth-child(1) {
 }
 
 #refs blockquote::after {
-  content: '';
-	position: absolute;
-	bottom: 0;
-	left: 15%;
-	width: 0;
-	height: 0;
-	border: 22px solid transparent;
-	border-top-color: var(--darkgrey);
-	border-bottom: 0;
-	border-left: 0;
-	margin-left: -11px;
-	margin-bottom: -22px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 0;
+  height: 0;
+  border: 22px solid transparent;
+  border-top-color: var(--darkgrey);
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -11px;
+  margin-bottom: -22px;
 }
 
 #refs blockquote span {
   color: white;
   font-size: 18px;
   padding-left: 10px;
-
 }
 
 #refs blockquote {
@@ -590,6 +593,7 @@ td > ul > li:nth-child(1) {
   font-size: 18px;
   display: flex;
   align-items: center;
+  height: 100px;
 }
 
 #refs .refs-card {
@@ -734,9 +738,37 @@ textarea:valid {
   color: var(--grey);
 }
 
-/*TODO background image nesedi pri overflowe*/
 @media only screen and (max-width: 768px) {
   body {
+    width: 768px;
     overflow: auto;
+  }
+
+  #stats i {
+    left: 87px;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 769px) {
+  #stats i {
+    left: 92px;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 769px) {
+  #stats i {
+    left: 95px;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 769px) {
+  #stats i {
+    left: 105px;
+  }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  #stats i {
+    left: 115px;
   }
 }
