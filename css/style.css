@@ -35,6 +35,11 @@ a:hover {
   color: white;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 .content {
   width: 1200px;
   min-width: 768px;
@@ -472,7 +477,7 @@ a:hover {
   background-size: cover;
 }
 
-#price .content{ 
+#price .content {
   margin-bottom: 80px;
 }
 
@@ -499,6 +504,11 @@ a:hover {
   color: var(--grey);
 }
 
+#price tbody tr:hover {
+  color: steelblue;
+  background-color: white;
+}
+
 #price td {
   border-top: 1px solid steelblue;
   border-bottom: 1px solid steelblue;
@@ -510,6 +520,7 @@ a:hover {
   background-color: var(--mevyr);
   border: 1px solid steelblue;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 #price button:hover {
@@ -525,6 +536,194 @@ td > ul > li:nth-child(1) {
   margin-left: -15px;
   font-weight: bolder;
   list-style-type: none;
+}
+
+#refs {
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+#refs .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+}
+
+#refs blockquote::before {
+  content: '"';
+  font-style: italic;
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+#refs blockquote:hover {
+  color: white;
+}
+
+#refs blockquote::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  border: 10px solid;
+  border-color: #4d4d4d white white #4d4d4d;
+}
+
+#refs blockquote span {
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin: 10px 10px 10px 10px;
+}
+#refs blockquote {
+  color: steelblue;
+  display: flex;
+  font-size: 18px;
+}
+#refs .refs-card {
+  background-color: #4d4d4d;
+  border-radius: 5px;
+  width: 300px;
+  max-width: 400px;
+  position: relative;
+}
+
+#refs .refs-card:hover {
+  background-color: steelblue;
+}
+
+figure img {
+  width: 60px;
+  border-radius: 60px;
+}
+
+#refs figure {
+  position: absolute;
+  display: flex;
+  top: 120%;
+}
+
+#refs figure h3 {
+  margin: auto;
+  padding-left: 10px;
+  display: inline;
+}
+
+#contact {
+  border-top: 2px dashed #4d4d4d;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+#contact .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 50px;
+  grid-row-gap: 0px;
+}
+
+#contact h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  flex: 1 100%;
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding-bottom: 30px;
+  padding-top: 50px;
+}
+
+#contact #map {
+  grid-row: 2;
+  height: 400px;
+  text-align: center;
+}
+
+#map > div:nth-child(2) > div:nth-child(2) > span {
+  font-weight: bold;
+}
+
+#contact form {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+#contact-subject {
+  grid-row: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#contact form #contact-message {
+  height: 150px;
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#contact-submit {
+  color: white;
+  background-color: steelblue;
+  grid-row: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 250px;
+  justify-self: center;
+}
+
+#contact-submit:hover {
+  background-color: green;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid steelblue;
+  border-radius: 5px;
+}
+input:focus,
+textarea:focus {
+  outline: none !important;
+  border: 1px solid green;
+  box-shadow: 0 0 2px green;
+}
+
+input:invalid:focus,
+textarea:invalid:focus {
+  color: red;
+}
+
+input:valid,
+textarea:valid {
+  color: steelblue;
+}
+
+#footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: black;
+}
+
+#footer .content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+#footer > div > span:nth-child(1) {
+  color: var(--grey);
 }
 
 /*TODO background image nesedi pri overflowe*/
