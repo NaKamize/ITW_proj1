@@ -6,7 +6,7 @@
  * Nezapomente pridat strucne hromadne komentare pro pravidla jednotlivych sekci
  * a pro netrivialni useky kodu (napr. bubliny v sekci #refs)
  */
-
+/* Vseobecne pravidla */
 :root {
   --grey: #898989;
   --liggrey: #bfbfbf;
@@ -49,13 +49,15 @@ main {
 }
 
 /* Header */
+/*  Pre velky nadpis je spraveny padding 10vh + 56vh z vrchu, takze sa nachadza v 2/3 stranky.
+    Pre zahlavie je spraveny grid na rozmiestnenie elementov.
+    Navigacny panel obsahuje transparentny okraj, aby sa pri pohybe misou netriasol panel.*/
 #header {
   background-image: url("../img/header.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   min-height: 400px;
-  width: 100vw;
   height: 100vh;
 }
 
@@ -199,6 +201,8 @@ main {
 }
 
 /* Section services */
+/*  Pre karticky je vytvoreny grid, vdaka ktoremu pridavanie dalsich kart
+    je usporiadane do stlpca.*/
 #services {
   margin-top: 60px;
   margin-bottom: 80px;
@@ -540,6 +544,11 @@ td > ul > li:nth-child(1) {
 }
 
 /* refs */
+/*  Div s kartou, v ktorom su ulozene vsetky elementy. Absolutne poziciovany
+    text aby sa posunul hore pre text s uvodzovkami. Pre ten je urcena velkost
+    100px. Viac netrepa pre dany text. Ukazatelik k ikonke je maly
+    pseudo element, ktoreho hruby okraj je transparenty, osekany a posunuty
+    tak aby ukazoval z forky k bubline. */
 #refs {
   margin-top: 60px;
   margin-bottom: 80px;
@@ -596,9 +605,7 @@ td > ul > li:nth-child(1) {
   position: absolute;
   bottom: 0;
   left: 15%;
-  width: 0;
-  height: 0;
-  border: 22px solid transparent;
+  border: 24px solid transparent;
   border-top-color: var(--darkgrey);
   border-bottom: 0;
   border-left: 0;
@@ -636,6 +643,8 @@ figure img {
 }
 
 /* contact */
+/* Jeden grid pre usporiadanie nadpisu mapy, formulara
+    druhy grid pre formular.*/
 #contact {
   border-top: 2px dashed #4d4d4d;
   margin-top: 60px;
@@ -750,10 +759,13 @@ textarea:valid {
   color: var(--grey);
 }
 
+/*  Zobrazenie posunutie okna na spodku spolu s zmenou pozicie absolutnej ikonky
+    pre sekciu s statistikami.*/
 @media only screen and (max-width: 768px) {
   body {
-    width: 768px;
+    width: fit-content;
     overflow: auto;
+    
   }
 
   #stats i {
